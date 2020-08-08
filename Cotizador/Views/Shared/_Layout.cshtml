@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Cotizador</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .container-fluid {
+            max-width: 90%;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif !important;
+        }
+
+        .header {
+            background-color: black;
+        }
+
+        .navbar {
+            background-color: black !important;
+        }
+
+        nav .navbar-nav li a, .navbar-light .navbar-brand {
+            color: white !important;
+        }
+
+            nav .navbar-nav li a:hover {
+                color: black !important;
+            }
+
+        .nav-item:hover {
+            background-color: white !important;
+            color: black !important;
+        }
+
+        .circle {
+            background: #B38A3B none repeat scroll 0 0;
+            border-radius: 151px;
+            display: block;
+            height: 24px;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 10px;
+            /*left: 0;
+            position: absolute;
+            top: 0;*/
+            width: 24px;
+        }
+
+        .img-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 150px;
+            margin: 20px auto;            
+        }
+
+        /*Equipo*/
+        .card-team {
+            border-color: rgb(179, 138, 60);
+        }
+        /*Equipo*/
+
+
+        /*Servicio*/
+        .btn-cotizar {
+            background-color: black !important;
+            border-color: black !important;
+        }
+
+        .btn-cotizar:hover {
+            background-color: rgb(179, 138, 60) !important;
+            border-color: rgb(179, 138, 60) !important;
+        }
+
+        .btn-cotizar:focus, .btn-cotizar.focus {
+            box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+        }
+
+        .btn-cotizar:not(:disabled):not(.disabled):active:focus, .btn-cotizar:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-cotizar.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+        }
+
+        .btn-agregar {
+            border-color: black !important;
+            color: black !important;
+        }
+
+        .btn-agregar:hover {
+            border-color: black !important;
+            background-color: black !important;
+            color: white !important;
+        }
+
+        .btn-agregar:focus, .btn-agregar.focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-agregar:not(:disabled):not(.disabled):active:focus, .btn-agregar:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-agregar.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+        }
+
+        /*Servicio*/
+        /*#v-pills-tab a {
+            color: rgb(145, 145, 145) !important;
+        }
+
+        #v-pills-tab a:hover {
+            color: rgb(179, 138, 60) !important;
+            font-weight: 700;
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+            background-color: white;
+            color: rgb(179, 138, 60) !important;
+            font-weight: 700;
+            border: 1px solid rgb(145, 145, 145) !important;
+        }*/
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid header">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Cotizador</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Equipo" asp-action="Index">Equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Servicio" asp-action="Index">S. Profesionales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="Privacy">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="Privacy">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Cotizador - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

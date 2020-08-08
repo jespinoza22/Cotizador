@@ -1,0 +1,101 @@
+﻿
+    <div class="col-md-8 text-center">  
+        <div>
+            <h3>Cotiza tu Equipo de Trabajo</h3><br />
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label text-left">Rol</label>
+                <div class="col-sm-4">
+                    <select id="inputRol" class="form-control">
+                        <option selected value="0">Seleccione</option>
+                        @foreach (var item in ViewBag.listaRoles) { 
+                            <option value="@item.idRol">@item.descripcionRol</option>
+                        }                        
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label text-left">Categoria</label>
+                <div class="col-sm-4">
+                    <select id="inputCategoria" class="form-control">
+                        <option selected value="0">Seleccione</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label text-left">Horas</label>
+                <div class="col-sm-2">
+                    <input type="number" id="inputHoras" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label text-left">Fecha Inicio</label>
+                <div class="col-sm-4">
+                    <input type="date" class="form-control" id="fechaInicio">
+                </div>
+                <div class="col-sm-4">
+                    <button id="agregarServicio" class="btn btn-outline-primary btn-agregar">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-danger" id="message">Debe llenar todos los campos</p>
+    <br />
+    <table class="table" style="width:50% !important">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Rol</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Horas</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="tBodyServicio">
+
+        </tbody>
+    </table><br />
+
+    <div class="col-md-8 text-center">
+        <div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label text-left">Email</label>
+                <div class="col-sm-6">
+                    <input type="email" class="form-control" id="correo">
+                </div>
+                <div class="col-sm-2">
+                    <button id="agregarServicio" class="btn btn-primary btn-cotizar">Cotizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @if (ViewBag.CotVisible)
+    {
+        <div class="container mt-5 mb-2">
+            <div class="row justify-content-center">
+                <table class="table" style="width:70% !important">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"><div class="row"><span class="circle"></span>Rol</div></th>
+                            <th scope="col">Junior</th>
+                            <th scope="col">Semi Senior</th>
+                            <th scope="col">Senior</th>
+                            <th scope="col">Fecha Vigencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.listaServicio)
+                        {
+                            <tr>
+                                <td>@item.Descripcion</td>
+                                <td>@item.precioJunior</td>
+                                <td>@item.precioSemiSenior</td>
+                                <td>@item.precioSenior</td>
+                                <td>@item.fechaVigencia.ToString("dd/MM/yyyy")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }

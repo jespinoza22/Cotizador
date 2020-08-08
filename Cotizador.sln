@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cotizador", "Cotizador\Cotizador.csproj", "{8759034D-BA4D-47E2-8040-F2B37E882168}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8759034D-BA4D-47E2-8040-F2B37E882168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8759034D-BA4D-47E2-8040-F2B37E882168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8759034D-BA4D-47E2-8040-F2B37E882168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8759034D-BA4D-47E2-8040-F2B37E882168}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA741CC0-B63C-4654-92AF-E6B5104776E0}
+	EndGlobalSection
+EndGlobal
