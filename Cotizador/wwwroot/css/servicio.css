@@ -1,0 +1,48 @@
+﻿/*Servicio*/
+    .btn-cotizar {
+        background-color: black !important;
+        border-color: black !important;
+    }
+
+    .btn-cotizar:hover {
+        background-color: rgb(179, 138, 60) !important;
+        border-color: rgb(179, 138, 60) !important;
+    }
+
+    .btn-cotizar:focus, .btn-cotizar.focus {
+        box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+    }
+
+    .btn-cotizar:not(:disabled):not(.disabled):active:focus, .btn-cotizar:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-cotizar.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+    }
+
+    .btn-agregar {
+        border-color: black !important;
+        color: black !important;
+    }
+
+    .btn-agregar:hover {
+        border-color: black !important;
+        background-color: black !important;
+        color: white !important;
+    }
+
+    .btn-agregar:focus, .btn-agregar.focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-agregar:not(:disabled):not(.disabled):active:focus, .btn-agregar:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-agregar.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.5);
+    }
+
+    .messageError {
+        margin: 0 !important;
+    }
+
+    #inputHoras {
+        width: 100px !important;
+    }
+/*Servicio*/

@@ -1,0 +1,24 @@
+﻿
+    .card-team {
+        border-color: black !important;
+    }
+
+    .btn-goLinkedin {
+        background-color: black !important;
+        border-color: black !important;
+        color: white !important;
+    }
+
+    .btn-goLinkedin:hover {
+        background-color: rgb(179, 138, 60) !important;
+        border-color: rgb(179, 138, 60) !important;
+    }
+
+    .btn-goLinkedin:focus, .btn-goLinkedin.focus {
+        box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+    }
+
+    .btn-goLinkedin:not(:disabled):not(.disabled):active:focus, .btn-goLinkedin:not(:disabled):not(.disabled).active:focus,
+    .show > .btn-goLinkedin.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem rgba(179, 138, 60, 0.5);
+    }

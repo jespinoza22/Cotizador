@@ -1,7 +1,8 @@
 ﻿@model List<Cotizador.Models.Equipo>
 
 
-<h2 class="text-center">Miembros del Equipo</h2><br />
+<h2 class="text-center">Miembros del Equipo</h2>
+<br />
 <div class="container-fluid">
     <div class="row justify-content-center">
         @foreach (var item in Model)
@@ -13,10 +14,12 @@
                         <h5 class="card-title">@item.NombreCompleto</h5>
                         <h6 class="card-subtitle">@item.Perfil</h6><br />
                         <p class="card-text text-justify">@item.Descripcion</p>
-                        <a href="@item.UrlLinkedin" target="_blank" class="btn btn-outline-primary">Linkedin</a>
+                        <a href="@item.UrlLinkedin" target="_blank" class="btn btn-outline-primary btn-goLinkedin">Linkedin</a>
                     </div>
                 </div>
             </div>
         }
     </div>
 </div>
+<link href="~/css/equipo.css" rel="stylesheet" />
+<script src="~/js/equipo.js"></script>
